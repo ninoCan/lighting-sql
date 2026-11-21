@@ -315,6 +315,8 @@ matches:
     replace: "DROP COLUMN $|$;"
 
     # Constraints
+  - trigger: ";ai;"
+    replace: "AUTO INCREMENT"
   - trigger: ";cons;"
     replace: "CONSTRAINT $|$"
   - trigger: ";un;"
@@ -326,7 +328,7 @@ matches:
   - trigger: ";pk;"
     replace: "PRIMARY KEY"
   - trigger: ";fk;"
-    replace: "FOREING KEY ($|$) REFERENCES"
+    replace: "FOREIGN KEY ($|$) REFERENCES"
   - trigger: ";ch;"
     replace: "CHECK ($|$)"
   - trigger: ";ga;"
@@ -349,7 +351,7 @@ matches:
     replace: "CASCADE;"
 
     # DML
-  - trigger: ";iis;"
+  - trigger: ";ii;"
     replace: "INSERT INTO $|$ ( )\n\tVALUES ( )"
   - trigger: ";up;"
     replace: "UPDATE $|$\nSET"

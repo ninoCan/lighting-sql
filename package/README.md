@@ -255,7 +255,7 @@ Supported constraints on DDL
 | `;nd;`   | `NULLS DISTINCT`                    | Treat nulls as distinct values               |
 | `;nnd;`  | `NULLS NOT DISTINCT`                | Do not treat nulls as distinct values        |
 | `;pk;`   | `PRIMARY KEY`                       | Define primary key constraint                |
-| `;fk;`   | `FOREING KEY ($\|$) REFERENCES`     | Define foreign key constraint                |
+| `;fk;`   | `FOREIGN KEY ($\|$) REFERENCES`     | Define foreign key constraint                |
 | `;ch;`   | `CHECK ($\|$)`                      | Apply conditional constraint to column       |
 | `;ga;`   | `GENERATED ALWAYS AS ($\|$)`        | Define computed column based on other values |
 | `;gas;`  | `GENERATED ALWAYS AS ($\|$) STORED` | Define and persist computed column           |
@@ -279,7 +279,7 @@ Expansions for inserting, updating, and deleting data.
 
 | Trigger  | Replacement                                 | Description                  |
 | -------- | ------------------------------------------- | ---------------------------- |
-| `;iis;`  | `INSERT INTO $\|$ (cols)\n\tVALUES ()`      | Insert statement with values |
+| `;ii;`  | `INSERT INTO $\|$ (cols)\n\tVALUES ()`      | Insert statement with values |
 | `;up;`   | `UPDATE $\|$\nSET`                          | Update statement template    |
 | `;df;`   | `DELETE FROM`                               | Delete statement             |
 | `;expl;` | `EXPLAIN PLAN FOR\n`                        | Explain plan                 |
